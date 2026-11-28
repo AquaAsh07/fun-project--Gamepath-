@@ -6,6 +6,10 @@ Gamepath helps players turn a random pick into a focused game challenge. The fir
 
 Open `index.html` in a modern browser. No build step or dependencies are required.
 
+## MVP scope
+
+The working v1 rules and boundaries are documented in [MVP-SCOPE.md](MVP-SCOPE.md). In short: the player chooses a game, reveals a random role/category, then an eligible character or challenge item. V1 uses step-by-step reveal cards; no accounts, backend, or live game integrations are planned.
+
 ## Project roadmap
 
 1. **Project map & guardrails** — agree on the MVP, rules, and game data.

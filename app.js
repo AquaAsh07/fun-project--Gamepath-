@@ -4,7 +4,7 @@ const roadmap = [
     summary: 'Agree on the product shape and keep the build focused.',
     steps: [
       { title: 'Plan Gamepath and create this project tracker', description: 'Set the phased scope, define the first release direction, and establish a simple progress tracker.', done: true },
-      { title: 'Define the MVP rules and boundaries', description: 'Decide how a game, role, character, and challenge are selected—and what is intentionally out of scope for v1.' },
+      { title: 'Define the MVP rules and boundaries', description: 'Documented the player flow, randomizer rules, scope, and acceptance checks in MVP-SCOPE.md.', done: true },
       { title: 'Confirm the game data and challenge targets', description: 'Map the launch roster and categories for Marvel Rivals, VALORANT, and FC 27; clarify level goals such as Lord (20) and Champion (70).' }
     ]
   },
