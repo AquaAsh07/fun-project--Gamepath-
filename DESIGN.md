@@ -122,16 +122,50 @@ Goal selected ── Confirm challenge ──→ Your Gamepath
 | Confirmed | Final path summary and fresh-path control | Start a new path |
 | Empty/error | What could not be selected and why | Retry or return safely |
 
-The role pool and hero pool come from `game-data/marvel-rivals.json`. Announced-but-unreleased heroes never appear. A role reroll invalidates the hero and goal; a hero reroll keeps the role but clears the goal; changing a goal does not reroll either result. Exact motion, input, and reroll edge cases are the next design decision.
+The role pool and hero pool come from `game-data/marvel-rivals.json`. Announced-but-unreleased heroes never appear. A role reroll invalidates the hero and goal; a hero reroll keeps the role but clears the goal; changing a goal does not reroll either result. Detailed reveal and reroll behavior is defined below.
 
 ## Accessibility and interaction notes
 
 - Use real buttons for reveals and actions; goal cards should be a keyboard-operable radio group.
-- Focus order follows Role → Hero → Goal → confirmation. Return focus to the reveal button after rerolls.
+- Focus order follows Role → Hero → Goal → confirmation. Preserve focus on the activated reroll button after a reroll.
 - Announce each new result in a polite live region, e.g. “Role revealed: Duelist.” Do not convey selected/progress states by color alone.
 - Provide visible keyboard focus, sufficient contrast and touch-sized targets. Keep a reduced-motion path; animation must not delay the next action.
 - If the roster cannot provide an eligible hero, show a recoverable error instead of a blank card.
 
+## Reveal, reroll, and keyboard behavior
+
+The card-based reveal is the v1 interaction; there is no wheel or game of chance animation that delays the result.
+
+### Reveal rules
+
+- Each action draws once from the current eligible pool using a uniform random selection. The role is selected uniformly first; the hero is then selected uniformly from that role's pool.
+- A reveal may use a brief, subtle visual transition (roughly 500 ms) to signal the result. The selected result is fixed as soon as the action starts; animation must never cycle through fake outcomes or change the selected value.
+- Under `prefers-reduced-motion: reduce`, show the result immediately with no movement or timed reveal.
+- Prevent double activation while a short transition is in progress. Keep the primary action available immediately when the result settles.
+
+### Reroll rules
+
+| Action | What changes | What is cleared |
+| --- | --- | --- |
+| Reroll role | Select a different role, if possible | Hero and goal |
+| Reroll hero | Select a different hero from the current role, if possible | Goal |
+| Change goal | Select Lord 20 or max proficiency 70 | Nothing else |
+| Start a new path | Return to the ready state | Role, hero, and goal |
+
+- Rerolls are unlimited; the player may keep the result or reroll again.
+- Do not immediately repeat the current result when there is more than one eligible choice. If only one eligible option exists, allow it to repeat and explain that it is the only available choice.
+- Rerolling the role after a hero or goal was chosen clears those dependent choices before showing the new role. Rerolling a hero preserves the selected role.
+- A goal change never silently changes the role or hero. “Start a new path” is the only action that clears the entire path deliberately.
+- If a pool is unexpectedly empty, do not generate a fallback hero from another role. Keep the current path intact and show a retry/recovery message.
+
+### Keyboard, focus, and announcements
+
+- Reveal and reroll actions are native buttons. `Enter` or `Space` activates them; no keyboard-only interaction is required to use the transition.
+- Goal choices are a native radio group with `fieldset`/`legend` or equivalent accessible naming; arrow keys move between goals and `Space` selects.
+- Keep focus on the activated button as its result/next-action label updates; do not move focus to the top of the card during reveals. For rerolls, retain focus on the matching reroll control.
+- Use one polite live region for results and dependency clearing. Example messages: “Role revealed: Duelist. Reveal a hero when ready.” “Hero rerolled: Psylocke. Your role stays Duelist; choose a goal again.” “Role changed to Strategist; hero and goal cleared.” Avoid announcing decorative animation frames.
+- On empty/error states, announce the issue and expose a keyboard-operable retry or restart action. Never communicate status with color alone.
+
 ## Decision boundary
 
-This is the layout and user-flow sketch. The next step will lock down the precise reveal interaction: whether each reveal animates, reroll limits/behavior, keyboard details, and how the result is announced. Visual polish and final assets come later.
+The Marvel-first layout, state flow, reveal type, and reroll/accessibility rules are now set. The next design step will define goal choice, commitment/confirmation, what “complete” means in the app, and the final-path summary. Visual polish and final assets come later.

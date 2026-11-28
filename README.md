@@ -10,7 +10,7 @@ Open `index.html` in a modern browser. No build step or dependencies are require
 
 The working v1 rules and boundaries are documented in [MVP-SCOPE.md](MVP-SCOPE.md). **Marvel Rivals is the only launch game**; the player reveals a random official role, then an eligible hero, then chooses a proficiency goal. VALORANT and FC 27 are future additions and will be researched when they are ready to join the catalog. V1 uses step-by-step reveal cards; no accounts, backend, or live game integrations are planned.
 
-The researched Season 11 roster, role pools, and goal presets are in [game-data/MARVEL-RIVALS.md](game-data/MARVEL-RIVALS.md) and [game-data/marvel-rivals.json](game-data/marvel-rivals.json). The Marvel-first flow and responsive screen sketch are in [DESIGN.md](DESIGN.md).
+The researched Season 11 roster, role pools, and goal presets are in [game-data/MARVEL-RIVALS.md](game-data/MARVEL-RIVALS.md) and [game-data/marvel-rivals.json](game-data/marvel-rivals.json). The Marvel-first flow, responsive screen sketch, and reveal/reroll/accessibility rules are in [DESIGN.md](DESIGN.md).
 
 ## Project roadmap
 

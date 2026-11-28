@@ -13,8 +13,8 @@ const roadmap = [
     summary: 'Design the Marvel role-to-hero-to-goal path and its interactions.',
     steps: [
       { title: 'Sketch the Marvel-first user flow and screen layout', description: 'Documented the progressive role → hero → goal flow and responsive screen states in DESIGN.md.', done: true },
-      { title: 'Finalize the reveal and reroll interaction', description: 'Define reveal feedback, reroll edge cases, keyboard behavior, and accessible result announcements for the selected card-based flow.' },
-      { title: 'Define challenge settings and completion states', description: 'Specify goal selection, such as Lord or Champion, and what the user sees after getting a path.' }
+      { title: 'Finalize the reveal and reroll interaction', description: 'Defined no-repeat rerolls, dependency clearing, reduced-motion behavior, keyboard focus, and live announcements in DESIGN.md.', done: true },
+      { title: 'Define challenge settings and completion states', description: 'Decide how players choose a target, confirm their path, and understand what Gamepath does (and does not) track as complete.' }
     ]
   },
   {
