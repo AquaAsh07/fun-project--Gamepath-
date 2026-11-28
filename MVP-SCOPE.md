@@ -50,6 +50,6 @@ This is a deliberately small first release. **Marvel Rivals is the only launch g
 
 ## Decisions for later phases
 
-- The exact screen layout, reveal-card states, and restart/reroll controls are the next design step.
+- The first screen-flow sketch is in [`DESIGN.md`](DESIGN.md). Final reveal feedback, reroll edge cases, and keyboard/result-announcement behavior remain for the next design step.
 - When VALORANT or FC 27 is added, research its then-current patch/season, player challenges, and goal presets before making it selectable. Keep each game's catalog separate and cite the research.
 - Maintain the Marvel Rivals roster against official updates; do not include announced heroes until they are playable.

@@ -10,10 +10,10 @@ const roadmap = [
   },
   {
     title: 'Core experience',
-    summary: 'Design the path from choosing a game to getting a challenge.',
+    summary: 'Design the Marvel role-to-hero-to-goal path and its interactions.',
     steps: [
-      { title: 'Sketch the Marvel-first user flow and screen layout', description: 'Plan the role reveal, hero reveal, goal choice, and a future game picker only when another game is ready.' },
-      { title: 'Choose the randomizer interaction', description: 'Settle the wheel or flashcard reveal behavior, including rerolls, animation, and accessible controls.' },
+      { title: 'Sketch the Marvel-first user flow and screen layout', description: 'Documented the progressive role → hero → goal flow and responsive screen states in DESIGN.md.', done: true },
+      { title: 'Finalize the reveal and reroll interaction', description: 'Define reveal feedback, reroll edge cases, keyboard behavior, and accessible result announcements for the selected card-based flow.' },
       { title: 'Define challenge settings and completion states', description: 'Specify goal selection, such as Lord or Champion, and what the user sees after getting a path.' }
     ]
   },
@@ -21,7 +21,7 @@ const roadmap = [
     title: 'Build the MVP',
     summary: 'Turn the approved flow into a usable browser experience.',
     steps: [
-      { title: 'Build the responsive Gamepath interface', description: 'Create the game selection and focused reveal screens for desktop and mobile.' },
+      { title: 'Build the responsive Gamepath interface', description: 'Create the Marvel-first role, hero, and goal screens for desktop and mobile.' },
       { title: 'Implement data-driven random selections', description: 'Use structured game, category, character, and challenge data instead of hard-coded screen logic.' },
       { title: 'Add fairness, reroll, and empty-state handling', description: 'Avoid invalid results, explain unavailable data, and make rerolls feel deliberate.' }
     ]
