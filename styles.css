@@ -46,6 +46,9 @@ h1 > span { color: var(--mint); }
 .tag { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); color: #c2cbcf; background: rgba(255,255,255,.015); border-radius: 4px; padding: 7px 10px; font-size: 10px; font-weight: 600; }
 .tag-icon { font-family: var(--mono); width: 15px; height: 15px; display: inline-grid; place-items: center; color: var(--mint); font-size: 9px; font-weight: 500; }
 .tag-icon.valorant { color: #fa746c; }.tag-icon.fc { color: #72c9b3; font-size: 8px; }
+.tag-status { margin-left: 2px; color: #6f7d83; font: 7px var(--mono); letter-spacing: .06em; }
+.tag-status.launch { color: var(--mint); }
+.future-tag { color: #8c999d; }
 .progress-card { background: var(--surface); border: 1px solid var(--line); padding: 22px 23px 0; border-radius: 6px; }
 .progress-card-top { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 9px; }
 .progress-icon { color: var(--mint); font-family: var(--sans); font-size: 17px; }

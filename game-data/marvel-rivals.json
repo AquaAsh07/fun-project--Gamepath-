@@ -1,0 +1,103 @@
+{
+  "gameId": "marvel-rivals",
+  "gameName": "Marvel Rivals",
+  "rosterAsOf": "2026-11-28",
+  "sourceNotes": "Season 11 roster snapshot. Update this catalog when a newly released hero becomes playable; do not add announced-but-unreleased heroes.",
+  "roleSelection": {
+    "method": "uniform-role-then-uniform-hero",
+    "description": "Choose uniformly from the three official roles first, then uniformly from that role's eligible hero picks. This keeps each role equally likely despite roster-size differences."
+  },
+  "goals": [
+    {
+      "id": "lord-20",
+      "label": "Reach Lord",
+      "targetLevel": 20,
+      "detail": "Reach Hero Proficiency level 20 on this hero.",
+      "eligibleForAllHeroes": true
+    },
+    {
+      "id": "mastery-70",
+      "label": "Max out Hero Proficiency",
+      "targetLevel": 70,
+      "detail": "Reach level 70, the Hero Proficiency cap. Champion rank begins at level 50; level 70 is the max-level completion target.",
+      "eligibleForAllHeroes": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "vanguard",
+      "label": "Vanguard",
+      "heroes": [
+        { "id": "angela", "name": "Angela" },
+        { "id": "captain-america", "name": "Captain America" },
+        { "id": "devil-dinosaur", "name": "Devil Dinosaur" },
+        { "id": "doctor-strange", "name": "Doctor Strange" },
+        { "id": "emma-frost", "name": "Emma Frost" },
+        { "id": "groot", "name": "Groot" },
+        { "id": "hulk", "name": "Hulk" },
+        { "id": "magneto", "name": "Magneto" },
+        { "id": "peni-parker", "name": "Peni Parker" },
+        { "id": "rogue", "name": "Rogue" },
+        { "id": "the-hood", "name": "The Hood" },
+        { "id": "the-thing", "name": "The Thing" },
+        { "id": "thor", "name": "Thor" },
+        { "id": "venom", "name": "Venom" },
+        { "id": "deadpool-vanguard", "heroId": "deadpool", "name": "Deadpool", "variant": "Vanguard" }
+      ]
+    },
+    {
+      "id": "duelist",
+      "label": "Duelist",
+      "heroes": [
+        { "id": "black-cat", "name": "Black Cat" },
+        { "id": "black-panther", "name": "Black Panther" },
+        { "id": "black-widow", "name": "Black Widow" },
+        { "id": "blade", "name": "Blade" },
+        { "id": "cyclops", "name": "Cyclops" },
+        { "id": "daredevil", "name": "Daredevil" },
+        { "id": "elsa-bloodstone", "name": "Elsa Bloodstone" },
+        { "id": "gorr", "name": "Gorr the God Butcher" },
+        { "id": "hawkeye", "name": "Hawkeye" },
+        { "id": "hela", "name": "Hela" },
+        { "id": "human-torch", "name": "Human Torch" },
+        { "id": "iron-fist", "name": "Iron Fist" },
+        { "id": "iron-man", "name": "Iron Man" },
+        { "id": "magik", "name": "Magik" },
+        { "id": "mister-fantastic", "name": "Mister Fantastic" },
+        { "id": "moon-knight", "name": "Moon Knight" },
+        { "id": "namor", "name": "Namor" },
+        { "id": "phoenix", "name": "Phoenix" },
+        { "id": "psylocke", "name": "Psylocke" },
+        { "id": "scarlet-witch", "name": "Scarlet Witch" },
+        { "id": "spider-man", "name": "Spider-Man" },
+        { "id": "squirrel-girl", "name": "Squirrel Girl" },
+        { "id": "star-lord", "name": "Star-Lord" },
+        { "id": "storm", "name": "Storm" },
+        { "id": "the-punisher", "name": "The Punisher" },
+        { "id": "winter-soldier", "name": "Winter Soldier" },
+        { "id": "wolverine", "name": "Wolverine" },
+        { "id": "deadpool-duelist", "heroId": "deadpool", "name": "Deadpool", "variant": "Duelist" }
+      ]
+    },
+    {
+      "id": "strategist",
+      "label": "Strategist",
+      "heroes": [
+        { "id": "adam-warlock", "name": "Adam Warlock" },
+        { "id": "cloak-and-dagger", "name": "Cloak & Dagger" },
+        { "id": "gambit", "name": "Gambit" },
+        { "id": "invisible-woman", "name": "Invisible Woman" },
+        { "id": "jeff-the-land-shark", "name": "Jeff the Land Shark" },
+        { "id": "jubilee", "name": "Jubilee" },
+        { "id": "loki", "name": "Loki" },
+        { "id": "luna-snow", "name": "Luna Snow" },
+        { "id": "mantis", "name": "Mantis" },
+        { "id": "nightcrawler", "name": "Nightcrawler" },
+        { "id": "rocket-raccoon", "name": "Rocket Raccoon" },
+        { "id": "ultron", "name": "Ultron" },
+        { "id": "white-fox", "name": "White Fox" },
+        { "id": "deadpool-strategist", "heroId": "deadpool", "name": "Deadpool", "variant": "Strategist" }
+      ]
+    }
+  ]
+}

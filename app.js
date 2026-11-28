@@ -5,14 +5,14 @@ const roadmap = [
     steps: [
       { title: 'Plan Gamepath and create this project tracker', description: 'Set the phased scope, define the first release direction, and establish a simple progress tracker.', done: true },
       { title: 'Define the MVP rules and boundaries', description: 'Documented the player flow, randomizer rules, scope, and acceptance checks in MVP-SCOPE.md.', done: true },
-      { title: 'Confirm the game data and challenge targets', description: 'Map the launch roster and categories for Marvel Rivals, VALORANT, and FC 27; clarify level goals such as Lord (20) and Champion (70).' }
+      { title: 'Confirm the launch game data and challenge targets', description: 'Researched the Season 11 Marvel Rivals roster, role pools, goal eligibility, and level 20/70 targets; see game-data/MARVEL-RIVALS.md.', done: true }
     ]
   },
   {
     title: 'Core experience',
     summary: 'Design the path from choosing a game to getting a challenge.',
     steps: [
-      { title: 'Sketch the main user flow and screen layout', description: 'Plan the game picker, role/category reveal, character reveal, and final challenge card.' },
+      { title: 'Sketch the Marvel-first user flow and screen layout', description: 'Plan the role reveal, hero reveal, goal choice, and a future game picker only when another game is ready.' },
       { title: 'Choose the randomizer interaction', description: 'Settle the wheel or flashcard reveal behavior, including rerolls, animation, and accessible controls.' },
       { title: 'Define challenge settings and completion states', description: 'Specify goal selection, such as Lord or Champion, and what the user sees after getting a path.' }
     ]
@@ -27,12 +27,12 @@ const roadmap = [
     ]
   },
   {
-    title: 'Game content & progression',
-    summary: 'Make each supported game feel complete and accurate.',
+    title: 'Future game content & updates',
+    summary: 'Keep Marvel current, then research each game before it joins.',
     steps: [
-      { title: 'Add Marvel Rivals roles, characters, and rank goals', description: 'Connect Duelist, Tank, and Support to the correct roster, with configurable character-level milestones.' },
-      { title: 'Add VALORANT agent and role paths', description: 'Define the agent categories and the challenge types that make sense for VALORANT.' },
-      { title: 'Add FC 27 modes and challenge paths', description: 'Choose suitable FC 27 categories and build a first set of replayable challenges.' }
+      { title: 'Maintain the Marvel Rivals roster and goals', description: 'Add new heroes only after release and recheck role labels and proficiency targets against current game sources.' },
+      { title: 'Research and add VALORANT paths', description: 'When ready for a future update, research the current season, agent roles, and durable plus trending challenge ideas.' },
+      { title: 'Research and add FC 27 paths', description: 'When ready for a future update, research the current modes, player challenges, and relevant goal presets.' }
     ]
   },
   {

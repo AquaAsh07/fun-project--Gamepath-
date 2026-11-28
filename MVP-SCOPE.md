@@ -3,20 +3,20 @@
 **Status:** agreed working specification for the first playable version  
 **Product promise:** Choose a game, reveal a random path, and get a clear challenge to play.
 
-This is a deliberately small first release. The game roster and exact challenge catalog are the next planning item; nothing here assumes that data is already complete.
+This is a deliberately small first release. **Marvel Rivals is the only launch game.** The roster and goal catalog are recorded in [`game-data/MARVEL-RIVALS.md`](game-data/MARVEL-RIVALS.md) and [`game-data/marvel-rivals.json`](game-data/marvel-rivals.json). VALORANT and FC 27 are future updates, not launch choices.
 
 ## Player flow
 
-1. **Choose a game.** The player explicitly picks Marvel Rivals, VALORANT, or FC 27. Game selection is not randomized.
-2. **Reveal a category.** Gamepath randomly picks an appropriate role or challenge category for that game.
-3. **Reveal an eligible pick.** A second reveal randomly picks a character, agent, or challenge item from the selected category. The result must belong to that category.
-4. **Set or view the goal.** Show a relevant goal with the result. For Marvel Rivals, include the player-facing Lord (character level 20) and Champion (character level 70) targets. The exact goal presentation for VALORANT and FC 27 is settled when their challenge data is confirmed.
-5. **Play again.** The player can reroll the current reveal or start a fresh path. A reroll must not change the chosen game or silently switch the selected category.
+1. **Start with Marvel Rivals.** It is the only live game in v1, so the launch experience opens directly into its randomizer rather than presenting a picker with unavailable games.
+2. **Reveal a role.** Gamepath picks uniformly from Vanguard, Duelist, and Strategist.
+3. **Reveal an eligible hero.** A second reveal uniformly picks a hero from that role. The result must belong to the selected role; Deadpool can appear in any of his three role variants.
+4. **Choose the goal.** The player chooses **Reach Lord (level 20)** or **Max out Hero Proficiency (level 70)** for the selected hero. The level-70 target is the cap within the Champion rank band, not the level at which Champion rank begins.
+5. **Play again.** The player can reroll the current reveal or start a fresh path. A reroll must not silently change an already-revealed role.
 
 ## MVP interaction rules
 
 - Use a **step-by-step reveal card** for v1, not a spinning wheel. This keeps the interaction quick, readable, keyboard-friendly, and practical on mobile; a wheel can be evaluated later.
-- The player chooses the game; randomness starts at that game's category/role stage.
+- Marvel Rivals is the only game at launch, so the app starts there directly; add a game picker only when another game's catalog is ready.
 - Each category reveal is followed by a pick drawn only from that category's eligible data.
 - Use a fair uniform random selection among eligible entries. Avoid an immediate repeat on reroll when there is more than one eligible option; allow the same result when it is the only option.
 - Keep the current path visible while revealing the next step. Provide clear back/restart behavior and a useful empty-state message if a category has no eligible entries.
@@ -25,9 +25,9 @@ This is a deliberately small first release. The game roster and exact challenge 
 
 ## In scope
 
-- Responsive game selection and reveal screens.
-- Data-driven game → category/role → eligible pick flow for the three planned games.
-- Relevant challenge/goal display, including Marvel Rivals' level 20 and level 70 milestones.
+- A responsive Marvel Rivals-first experience with role and hero reveal cards.
+- Data-driven Marvel Rivals role → eligible hero → goal flow, using the Season 11 roster snapshot.
+- The Lord level-20 and level-70 max-proficiency goal presets, available for every playable hero.
 - Reroll, start-over, empty states, and browser refresh-safe handling only if needed to preserve the active path.
 - Keyboard-accessible controls and reduced-motion-friendly reveal feedback.
 
@@ -42,14 +42,14 @@ This is a deliberately small first release. The game roster and exact challenge 
 
 ## MVP acceptance checks
 
-- A player can choose each planned game and complete a valid path without needing an account.
-- Every revealed pick belongs to the category shown immediately before it.
-- Marvel Rivals results can be paired with the Lord (20) or Champion (70) target.
+- A player can complete a Marvel Rivals path without an account; unreleased future games are not shown as selectable.
+- Each role is equally likely, then a valid hero is drawn uniformly from that role's eligible picks.
+- Every Marvel Rivals hero can be paired with the Lord (20) or max-proficiency (70) target.
 - Reroll and start-over have predictable behavior, including one-item and empty categories.
 - The complete flow works on mobile and desktop and can be operated with a keyboard.
 
-## Decisions still open for the next step
+## Decisions for later phases
 
-- The launch roster and exact role/category labels for every supported game.
-- Which FC 27 challenge categories/items to include, and suitable goal presets for VALORANT and FC 27.
-- Whether each character/pick is eligible for all relevant challenge targets.
+- The exact screen layout, reveal-card states, and restart/reroll controls are the next design step.
+- When VALORANT or FC 27 is added, research its then-current patch/season, player challenges, and goal presets before making it selectable. Keep each game's catalog separate and cite the research.
+- Maintain the Marvel Rivals roster against official updates; do not include announced heroes until they are playable.
