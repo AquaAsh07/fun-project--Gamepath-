@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1118">
+  <meta name="description" content="Gamepath project roadmap and phase-by-phase checklist.">
+  <title>Gamepath — Project roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Gamepath home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>gamepath<span class="brand-period">.</span></span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> PROJECT ROADMAP <span class="note-divider">/</span> V.01</div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE BUILD PLAN</p>
+          <h1 id="page-title">Pick a path.<br><span>Play the game.</span></h1>
+          <p class="hero-description">A focused, step-by-step plan for turning Gamepath into your go-to random challenge generator. One phase at a time—no detours.</p>
+          <div class="hero-tags" aria-label="Planned games">
+            <span class="tag"><span class="tag-icon marvel">M</span> Marvel Rivals</span>
+            <span class="tag"><span class="tag-icon valorant">V</span> VALORANT</span>
+            <span class="tag"><span class="tag-icon fc">FC</span> FC 27</span>
+          </div>
+        </div>
+        <aside class="progress-card" aria-label="Project progress">
+          <div class="progress-card-top"><span>OVERALL PROGRESS</span><span class="progress-icon" aria-hidden="true">↗</span></div>
+          <div class="progress-number"><span id="progress-percent">0</span><small>%</small></div>
+          <div class="progress-track" role="progressbar" aria-label="Overall project completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div>
+          <div class="progress-meta"><span id="progress-count">0 of 0 steps</span><span id="phase-count">0 phases</span></div>
+          <div class="next-up"><span class="next-up-mark">NEXT UP</span><p id="next-step">Loading your next step…</p></div>
+        </aside>
+      </section>
+
+      <section class="roadmap" aria-labelledby="roadmap-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE ROADMAP</p>
+            <h2 id="roadmap-title">Build it in chapters<span>.</span></h2>
+          </div>
+          <button class="reset-button" id="reset-button" type="button" title="Clear saved progress and restore the initial checklist">↺ <span>Reset progress</span></button>
+        </div>
+        <div id="phase-list" class="phase-list" aria-live="polite"></div>
+        <p class="storage-note"><span aria-hidden="true">◈</span> Your progress saves automatically on this device.</p>
+      </section>
+    </main>
+
+    <footer class="footer"><a class="footer-brand" href="#top">gamepath<span>.</span></a><span>GOOD RUNS START WITH A PLAN.</span><span>© 2026</span></footer>
+  </div>
+  <noscript><p class="noscript">Enable JavaScript to use the interactive project checklist.</p></noscript>
+</body>
+</html>
